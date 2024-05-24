@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
             $table->string('nom', 50)->nullable();
-            $table->string('image_ul')->default('https://place-hold.it/300x500');
+            $table->string('image')->default('https://place-hold.it/300x500');
             $table->string('categorie')->nullable();
             $table->text('description');
             $table->timestamps();

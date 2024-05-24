@@ -23,8 +23,8 @@ class ArticleController extends Controller
 
     public function afficher_details($id){
         // $article = DB::table('articles')->where('id', $id)->get();
-        $article = Article::find($id);
-        
+        // $article = Article::find($id);
+        $article = Article::findOrFail($id);
 
         return view('articles/details', ['article'=>$article]);
     }
